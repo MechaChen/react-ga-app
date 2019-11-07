@@ -1,0 +1,18 @@
+header {
+    width: 80%;
+    max-width: 1200px;
+    margin: auto ;
+    padding: 30px 0 20px;
+    display: flex;
+}
+
+.router-link {
+    margin-right: 30px;
+    text-decoration: none;
+    color: #bd93f9;
+    font-size: 18px;
+    transition: .5s;
+    &:hover {
+        color: #50fa7b;
+    }
+}
