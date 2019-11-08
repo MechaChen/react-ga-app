@@ -9,6 +9,7 @@ const Header = () => {
             <Link className="router-link" to="/about">About</Link>
             <Link className="router-link" to="/paint">Paint</Link>
             <Link className="router-link" to="/scroll">Scroll</Link>
+            <Link className="router-link" to="/outboundlinks">OutBoundLinks</Link>
         </header>
     );
 }

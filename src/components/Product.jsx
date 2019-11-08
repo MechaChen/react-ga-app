@@ -8,9 +8,7 @@ const Product = (props) => {
             <span className="product__index">Product {props.index}</span>
             <img className="product__image" src={props.src} />
             <div className="product__buttons__wrapper">
-                <button className="product__button" onClick={props.minusProdCount}>-</button>
-                <span className="product__count">{props.count}</span>
-                <button className="product__button" onClick={props.addProdCount}>+</button>
+                <button className="product__button" onClick={props.handlePurchase}>BUY</button>
             </div>
         </div>
     );

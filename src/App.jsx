@@ -11,6 +11,7 @@ import Product from './components/Products';
 import NotFound from './components/NotFound';
 import Paint from './components/Paint';
 import Scroll from './components/Scroll';
+import OutBoundLinks from './components/OutBoundLinks';
 
 
 ReactGA.initialize('UA-151504017-1');
@@ -53,6 +54,7 @@ const App = () => {
                 <Route path="/about" component={About} />
                 <Route path="/paint" component={Paint} />
                 <Route path="/scroll" component={Scroll} />
+                <Route path="/outboundlinks" component={OutBoundLinks} />
                 <Route component={NotFound} />
             </Switch>
         </Router>

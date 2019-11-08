@@ -34,7 +34,7 @@ $componentName: 'product';
     padding-top: 10px;
     display: flex;
     flex-flow: row nowrap;
-    justify-content: space-between;
+    justify-content: center;
     align-items: center;
 }
 
@@ -51,8 +51,9 @@ $componentName: 'product';
     background: #d3d4d5;
     border-radius: 25px;
     box-shadow: 4px 3px 0 #878787;
-    font-size: 24px;
+    font-size: 16px;
     color: #44475a;
+    font-weight: bold;
     cursor: pointer;
     transition: .3s;
     position: relative;

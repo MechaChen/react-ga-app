@@ -1,0 +1,12 @@
+.out-bound-links__title {
+    padding-bottom: 50px;
+}
+
+.out-bound-links__link {
+    text-decoration: none;
+    color:#bd93f9;
+    transition: .3s;
+    &:hover {
+        color: #8be9fd;
+    }
+}

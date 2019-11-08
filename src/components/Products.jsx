@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import ReactGA from 'react-ga';
 import Product from '@components/Product';
 import Tomb from '@images/tomb.png';
 import Potion from '@images/potion.png';
@@ -30,14 +31,12 @@ const Products = () => {
         }
     ];
 
-    const [prodCount, setProdCount] = useState(products.map(() => 0));
-
-    const addProdCount = (index) => {
-        setProdCount(prodCount.map((prod, i) => i === index ? prod + 1 : prod));
-    }
-
-    const minusProdCount = (index) => {
-        setProdCount(prodCount.map((prod, i) => i === index ? prod - 1 : prod));
+    const handlePurchase = (index) => {
+        console.log('ReactGA event fire');
+        ReactGA.event({
+            category: 'Purchase',
+            action: `Buy ${index} product`,
+        });
     }
 
     return (
@@ -51,9 +50,7 @@ const Products = () => {
                             name={prod.name} 
                             index={i} 
                             src={prod.src} 
-                            count={prodCount[i]}
-                            addProdCount={() => addProdCount(i)}
-                            minusProdCount={() => minusProdCount(i)}
+                            handlePurchase={() => handlePurchase(i)}
                         />
                     ))}
                 </div>
