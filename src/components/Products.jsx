@@ -32,7 +32,7 @@ const Products = () => {
   ];
 
   const handlePurchase = i => {
-    console.log("ReactGA event fire");
+    console.log("handlePurchase evt fire");
     ReactGA.event({
       category: "Purchase",
       action: `Buy ${i} product`

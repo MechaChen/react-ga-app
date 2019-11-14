@@ -1,9 +1,14 @@
 import React, { useState } from "react";
+import ReactGA from 'react-ga';
 
 const Product = props => {
   const [count, setCount] = useState(0);
-  const countMiles = () => {
+  const countMiles = (index) => {
     setCount(count - 1);
+    ReactGA.event({
+      category: "Count",
+      action: `Product${index} count decreased`
+    });
   };
   const countPlus = () => {
     if (count >= 0) {
@@ -16,7 +21,7 @@ const Product = props => {
       <span className="product__index">Product {props.index}</span>
       <img className="product__image" src={props.src} />
       <div className="product__counter">
-        <button className="product__button product__num" onClick={countMiles}>
+        <button className="product__button product__num" onClick={() => countMiles(props.index)}>
           -
         </button>
         <div className="num">{count}</div>
