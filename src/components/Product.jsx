@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import ReactGA from 'react-ga';
+import { generateKeyPairSync } from "crypto";
 
 const Product = props => {
   const [count, setCount] = useState(0);
@@ -9,6 +10,11 @@ const Product = props => {
       category: "Count",
       action: `Product${index} count decreased`
     });
+    gaSpy.args.should.eql([
+      ['create', 'foo', 'auto'],
+      ['send', 'pageview', '/valid']
+      ['send', { hitType: 'pageview', page: '/valid' }]
+    ]);
   };
   const countPlus = () => {
     if (count >= 0) {

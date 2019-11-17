@@ -12,6 +12,8 @@ import NotFound from './components/NotFound';
 import Paint from './components/Paint';
 import Scroll from './components/Scroll';
 import OutBoundLinks from './components/OutBoundLinks';
+import FakePageview from './components/FakePageview';
+import MessageTextingForm from './components/MessageTextingForm';
 
 
 ReactGA.initialize('UA-151504017-1');
@@ -54,7 +56,9 @@ const App = () => {
                 <Route path="/about" component={About} />
                 <Route path="/paint" component={Paint} />
                 <Route path="/scroll" component={Scroll} />
+                <Route path="/fake-pageview" component={FakePageview} />
                 <Route path="/outboundlinks" component={OutBoundLinks} />
+                <Route path="/message-texting-form" component={MessageTextingForm} />
                 <Route component={NotFound} />
             </Switch>
         </Router>
